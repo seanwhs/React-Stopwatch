@@ -1,19 +1,29 @@
+/* Main wrapper for the stopwatch UI */
 .stopwatch-container {
+  /* Use Flexbox to stack elements vertically and center them */
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  /* Monospace font ensures numbers don't jump around when they change width */
   font-family: 'Courier New', Courier, monospace;
+  
+  /* Dark "Code Editor" style theme */
   background: #282c34;
   color: white;
+  
+  /* Spacing and rounded corners */
   padding: 2rem;
   border-radius: 15px;
 }
 
+/* The actual time display */
 h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
 }
 
+/* General button styling */
 button {
   padding: 10px 20px;
   margin: 5px;
@@ -21,9 +31,24 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 5px;
+  
+  /* Smooth transition for the hover effect */
   transition: opacity 0.2s;
 }
 
-button:first-child { background-color: #4caf50; color: white; }
-button:last-child { background-color: #f44336; color: white; }
-button:hover { opacity: 0.8; }
+/* Target the 'Start/Stop' button (the first button in the container) */
+button:first-child { 
+  background-color: #4caf50; /* Green */
+  color: white; 
+}
+
+/* Target the 'Reset' button (the last button in the container) */
+button:last-child { 
+  background-color: #f44336; /* Red */
+  color: white; 
+}
+
+/* Visual feedback when hovering over buttons */
+button:hover { 
+  opacity: 0.8; 
+}
